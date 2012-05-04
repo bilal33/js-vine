@@ -172,11 +172,11 @@ Character.prototype.finishDisplay = function(param, displayImage)
             this.prevPosition = this.position.clone();
         }
 
-		if (displayImage)
-		{
+        if (displayImage)
+        {
             novel_setAlpha(this.domRef, this.alpha);
-		}
-			
+        }
+            
         
         if (param && param.say)
         {
@@ -1239,10 +1239,10 @@ function novel_changeBackground(param, clearAll)
         }
         effect = (param.effect) ? param.effect : "";
 
-		if (param.alpha)
-		{
-			targetAlpha = param.alpha;
-		}
+        if (param.alpha)
+        {
+            targetAlpha = param.alpha;
+        }
     }
 
     fileName = fileName.replace(/{{(.*?)}}/g, novel_interpolator);
@@ -1476,13 +1476,13 @@ function audio(param)
                     if (suffix != "")
                     {
                         audioSource = audioSource + "." + suffix;
-						novel.audio.src = novel.audioPath + audioSource;
-						novel.audioLoop = false;
+                        novel.audio.src = novel.audioPath + audioSource;
+                        novel.audioLoop = false;
                     }
-					else
-					{
-						novel.audio.src = "";
-					}
+                    else
+                    {
+                        novel.audio.src = "";
+                    }
                 }
                 if (param.loop != null)
                 {
