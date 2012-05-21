@@ -42,10 +42,10 @@ div.menuItem:hover {
     font-size: 11px;
     position: absolute;
     width: 480px;
-    height: 70px;
+    height: 80px;
     background-color: #3d372c;
     color: white;
-    top: 225px;
+    top: 240px;
     left: 0;
     padding: 0px;
     text-align: left;
@@ -53,6 +53,12 @@ div.menuItem:hover {
     opacity: 0.75;
 }
 
+.volume {
+	position: relative;
+	visibility: visible;
+	z-index: 1;
+	
+}
 </style>
 
 <script type="text/javascript" src="../js-vine.js"></script>
@@ -282,15 +288,15 @@ function prepareNovel()
 <div id="novelDiv">
     <div style="position: absolute;
         left:0; top: 0; z-index:-1">
-        <img id="background0" src="images/empty.png">
-    </div>
+        <img id="background0" src="images/empty.png">        
+  </div>
     <div style="position: absolute;
         left:0; top: 0; z-index:-1">
         <img id="background1" src="images/empty.png">
     </div>
     <div id="dialogDiv" style="z-index:100">
     </div>
-</div>
+<img src="images/speaker.png" class="volume" id="volume" onmousedown="alert('hi');" align="right" /></div>
 
 <!--<div style="text-align:center; margin-top: 0.5em;"><input type="button"
     value="Back to Beginning" onclick="initNovel(800, 600)"/></div>
