@@ -1,0 +1,39 @@
+@charset "utf-8";
+body
+{	
+    margin:0;
+    height:320px;
+    width:480px;
+    border: 1px solid black;
+       
+}
+
+.scene {
+    position: absolute;
+
+}
+
+.dialogtext
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;	
+    text-align: left;	
+}
+
+.main
+{
+}
+
+.dialog
+{
+    z-index: 50;
+    background-color: #3d372c;
+    margin: 0px;
+    padding: 0px;
+    height: 80px;
+    width: 480px;
+    color: white;
+    opacity: 0.55;
+    position: absolute;
+    top: 240px;
+}
