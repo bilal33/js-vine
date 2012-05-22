@@ -1,14 +1,5 @@
 // JavaScript Document
 /// <reference path="jquery-1.7.2.js" />
-
-$(document).ready(function () {
-    console.log('test');
-    VN.definescene('lecturehall.jpg', 'hello');
-    VN.loadscene('hello');
-    VN.audio.setupAudio("illurock.mp4", "hi", { action: "play" });
-
-
-});
 var VN = (function () {
 
     var imagesfolder = 'images/';
@@ -42,17 +33,28 @@ var VN = (function () {
                 });
                 
                 allAudio[tag] = currentAudio;
-                if (options!==null) {
-                    options;
-                    if (options.bob == undefined) {
-                        console.log("ok");
-                    }
+                if (options!==null) {                                        
                     if (options.action !== undefined) {
                         if (options.action === 'play') {
                             currentAudio.play();
                         }
                     }
 
+                }
+            }
+        }
+
+        function handleAudioOptions(audio, options) {
+            if (audio == null || options == null) {
+                return
+            }
+
+            if (options.action !== undefined) {
+                if (options.action === 'play') {
+                    audio.play();
+                }
+                else if (options.action === 'pause') {
+                    //do something
                 }
             }
         }
@@ -83,14 +85,10 @@ var VN = (function () {
         }
     }
 
-    
-
-
     return {
         definescene: scene,
         loadscene: sceneloader,
         audio: AudioManager        
     };
-
 
 } ());
